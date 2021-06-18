@@ -8,8 +8,8 @@
 s = 'abbc'
 b = 'cbabadcbbabbcbabaabccbabc'
 
-for index, letter in enumerate(b):
-    if letter in s:
+for index, character in enumerate(b):
+    if character in s:
         if len(b[index: index+4]) == len(s):
             if sorted(b[index: index+4]) == sorted(s):
                 print(index+1)
