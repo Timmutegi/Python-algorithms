@@ -14,7 +14,7 @@ def compress(string):
             count = count + 1
             index = index + 1
         if count == 1:
-            compressed += str(string[index])
+            compressed += str(string[index]) + str(count)
         else:
             compressed += str(string[index]) + str(count)
         index = index + 1
