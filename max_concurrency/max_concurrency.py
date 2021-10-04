@@ -29,7 +29,6 @@ def max_concurrency(times):
 
     return history_max 
 
-    # print(line)
 
 input1 = [(10, 20), (15, 30), (5, 10)] ## [(5, True), (10, True), (10, False), (15, True), (20, False), (30, False)]
 
