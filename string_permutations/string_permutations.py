@@ -7,7 +7,7 @@
 # SOLUTION:
 
 
-def findPermutation(smallString, largeString):
+def findPermutation(s, b):
     for index, character in enumerate(b):
         if character in s:
             if len(b[index: index+4]) == len(s):
