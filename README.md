@@ -1,2 +1,2 @@
 # Python algorithms
-    Data structures and algorithms solutions for common technical interview questions using Python
+    Data Structures and Algorithms solutions for common technical interview questions using Python
