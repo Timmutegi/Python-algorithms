@@ -1,3 +1,7 @@
+
+"""
+Fibonacci series solution
+"""
 class Solution:
     def fibonacci(self, n):
         if n == 0:
