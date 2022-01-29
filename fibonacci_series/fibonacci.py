@@ -1,6 +1,6 @@
 
 """
-Fibonacci series solution
+Given a number, return its fibonacci series value
 """
 class Solution:
     def fibonacci(self, n):
