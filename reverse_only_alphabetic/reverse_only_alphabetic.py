@@ -6,27 +6,26 @@ The position of the special characters should not be changed.
 """
 class Solution:
     def reverseOnlyAlphabetical(self, str):               
-        #convert string into list
-        listSample=list(str)
+        # convert string into list
+        str_array = list(str)
         
-        i = 0
-        j = len(listSample)-1
+        left = 0
+        right = len(str_array) - 1
         
-        while i < j:
-            if not listSample[i].isalpha():
-                i += 1
-            elif not listSample[j].isalpha():
-                j -= 1
+        while left < right:
+            if not str_array[left].isalpha():
+                left += 1
+            elif not str_array[right].isalpha():
+                right -= 1
             else:
-                #swap the element in the list 
-                #if both elements are alphabets
-                listSample[i], listSample[j]=listSample[j], listSample[i]
-                i+=1
-                j-=1
+                # swap the element in the list if both elements are alphabets
+                str_array[left], str_array[right] = str_array[right], str_array[left]
+                left += 1
+                right -= 1
 
         # convert list into string 
         # by concatenating each element in the list
-        return ''.join(listSample)                                   
+        return ''.join(str_array)                                   
                 
 str = 'sea!$hells3'
 print(Solution().reverseOnlyAlphabetical(str))
