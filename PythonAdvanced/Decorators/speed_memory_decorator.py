@@ -10,6 +10,9 @@ We'll use the decorator to test the perfomance of list generation using four met
 2. List comprehension
 3. Append
 4. Concatenation
+
+Decorators hide the function they are decorating.
+Functools wraps will update the decorator with the decorated functions attributes.
 """
 def measure_performance(func):
     '''Measure performance of a function'''
