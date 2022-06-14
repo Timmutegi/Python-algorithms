@@ -5,7 +5,7 @@ return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, an
 Notice that the solution set must not contain duplicate triplets.
 """
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
+    def threeSum(self, nums):
         res = []
         nums.sort()
         
