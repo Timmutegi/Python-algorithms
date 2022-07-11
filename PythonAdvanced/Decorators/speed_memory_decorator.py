@@ -31,6 +31,7 @@ def measure_performance(func):
         print(f'Time elapsed is seconds: {finish_time - start_time:.6f}')
         print(f'{"-"*40}')
         tracemalloc.stop()
+        
     return wrapper
 
 
