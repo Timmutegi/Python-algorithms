@@ -1,6 +1,6 @@
 # Python decorators allow you to change the behavior of a function without modifying the function itself
 
-# Here is the syntax of a basic Python decoator
+# Here is the syntax of a basic Python decorator
 def my_decorator_func(func):
     def wrapper_func():
         # Do something before the function
