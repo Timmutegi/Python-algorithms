@@ -7,10 +7,10 @@ def my_function():
 
 # Assign the fuction to a variable without parenthesis.
 
-descriptin = my_function
+description = my_function
 
 # Access the function from the variable it was assigned to
-print(descriptin())
+print(description())
 
 # 2 - A function can be nested within another function
 def outer_function():
@@ -23,7 +23,7 @@ def outer_function():
 
 outer_function()
 
-# 3 - Since a function can be nested inside another funciton it can also be returned
+# 3 - Since a function can be nested inside another function it can also be returned
 def outer_function():
     '''Assign task to student'''
     task = 'Read Python book chapter 3'
