@@ -62,6 +62,46 @@ class Node:
 
         print(self.data)
 
+    """
+    Get the number of nodes at a given depth
+    """
+    def getNodesAtDepth(self, depth, nodes=[]):
+        if depth == 0:
+            nodes.append(self.data)
+            return nodes
+
+        if self.left:
+            self.left.getNodesAtDepth(depth-1, nodes)
+        else:
+            nodes.extend([None]*2**(depth-1))
+        
+        if self.right:
+            self.right.getNodesAtDepth(depth-1, nodes)
+        else:
+            nodes.extend([None]*2**(depth-1))
+        return nodes
+
+    """
+    Add a node
+    """
+    def add(self, data):
+        if self.data == data:
+            return
+
+        if data < self.data:
+            if self.left is None:
+                self.left = Node(data)
+                return
+            else:
+                self.left.add(data)
+        
+        if data > self.data:
+            if self.right is None:
+                self.right = Node(data)
+                return
+            else:
+                self.right.add(data)
+
 class Tree:
     def __init__(self, root, name = ''):
         self.root = root
@@ -81,6 +121,32 @@ class Tree:
 
     def traversePostorder(self):
         self.root.traversePostorder()
+
+    def add(self, data):
+        self.root.add(data)
+
+    def _nodeToChar(self, n, spacing):
+        if n is None:
+            return '_'+(' '*spacing)
+        spacing = spacing-len(str(n))+1
+        return str(n)+(' '*spacing)
+
+    def print(self, label=''):
+        print(self.name+' '+label)
+        height = self.root.height()
+        spacing = 3
+        width = int((2**height-1) * (spacing+1) + 1)
+        # Root offset
+        offset = int((width-1)/2)
+        for depth in range(0, height+1):
+            if depth > 0:
+                # print directional lines
+                print(' '*(offset+1)  + (' '*(spacing+2)).join(['/' + (' '*(spacing-2)) + '\\']*(2**(depth-1))))
+            row = self.root.getNodesAtDepth(depth, [])
+            print((' '*offset)+''.join([self._nodeToChar(n, spacing) for n in row]))
+            spacing = offset+1
+            offset = int(offset/2) - 1
+        print('')
 
 
 node = Node(10)
@@ -115,3 +181,10 @@ myTree.traversePostorder()
 
 print("Tree height:")
 print(myTree.height())
+
+myTree.print()
+
+print("Adding a node")
+myTree.add(50)
+
+myTree.print()
