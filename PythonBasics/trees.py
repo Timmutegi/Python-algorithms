@@ -1,3 +1,6 @@
+"""
+This class implements the tree data structure
+"""
 class Node:
     def __init__(self, data):
         self.data = data
@@ -16,6 +19,11 @@ class Node:
             return self.right.search(target)
 
         print("Value is not in tree")
+
+    def height(self, h = 0):
+        leftHeight = self.left.height(h+1) if self.left else h
+        rightHeight = self.right.height(h+1) if self.right else h
+        return max(leftHeight, rightHeight)
 
     """
     Visit the nodes starting from the root then going to the left as much as you can
@@ -55,12 +63,15 @@ class Node:
         print(self.data)
 
 class Tree:
-    def __init__(self, root, name=''):
+    def __init__(self, root, name = ''):
         self.root = root
         self.name = name
 
     def search(self, target):
         return self.root.search(target)
+
+    def height(self):
+        return self.root.height()
 
     def traversePreorder(self):
         self.root.traversePreorder()
@@ -101,3 +112,6 @@ myTree.traverseinorder()
 
 print("Postorder Traversal")
 myTree.traversePostorder()
+
+print("Tree height:")
+print(myTree.height())
