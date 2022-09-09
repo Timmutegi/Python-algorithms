@@ -11,7 +11,6 @@
     1. Binary search
     2. Depth-First-Search
     3. Breadth-First-Search
-    4. 
 
 # Python Advanced
 - Covers advanced Python topics such as:
