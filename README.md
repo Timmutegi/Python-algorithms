@@ -1,16 +1,16 @@
 # LitCode
-Contains coding challenge solutions Algorithms solutions for common technical interview questions using Python
+- Contains coding challenge solutions Algorithms solutions for common technical interview questions using Python
 
 # GrokkingCodingInterview
-Covers common patterns for solving coding challenges
+- Covers common patterns for solving coding challenges
     1. Two Pointers
     2. Sliding Window
 
 # Algorithms
-Covers common algorithms 
+- Covers common algorithms 
 
 # Python Advanced
-Covers advanced Python topics such as:
+- Covers advanced Python topics such as:
     1. Decorators
     2. Context Switching
     3. Exception Handling
@@ -19,7 +19,7 @@ Covers advanced Python topics such as:
     6. Type checking
 
 # PythonBasics
-    Covers basic Python topics such as:
+- Covers basic Python topics such as:
     1. Variables
     2. Conditional statements
     3. Data structures [Lists, sets, tuples, dictionaries, trees]
