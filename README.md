@@ -1,5 +1,5 @@
 # LitCode
-- Contains coding challenge solutions Algorithms solutions for common technical interview questions using Python
+- Contains coding challenge solutions for common technical interview questions using Python
 
 # GrokkingCodingInterview
 - Covers common patterns for solving coding challenges
